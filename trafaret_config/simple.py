@@ -14,7 +14,7 @@ except ImportError:
 from .error import ConfigError, ErrorLine
 
 
-VARS_REGEX = re.compile(r'\$(\w+)|\$\{([^}]+)\}')
+VARS_REGEX = re.compile(r'(?<!\$)(\$(\w+)|\$\{([^}]+)\})')
 
 try:
     STR_TYPES = (str, unicode)
